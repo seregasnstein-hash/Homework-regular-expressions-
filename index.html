@@ -5,9 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/file.js"></script>
+    <script src="./js/file.js" defer></script>
   </head>
   <body>
+    <form class="form_registration">
+      <h2>Registration</h2>
 
+      <label for="user_email"
+        >Email:
+        <span class="form_error_email">Wrong email address</span>
+      </label>
+      <input
+        type="text"
+        id="user_email"
+        required
+        placeholder="3+ символа, [a-z., -, _] @ домен"
+      />
+
+      <label for="user_password"
+        >Password:
+        <span class="form_error_password">Wrong password</span>
+      </label>
+      <input
+        type="text"
+        id="user_password"
+        required
+        placeholder="6+ символа: [A-Z], [a-z], [0-9]"
+      />
+
+      <label for="user_password_repeat"
+        >Repeat:
+        <span class="form_error_repeat">Passwords must match</span>
+      </label>
+      <input type="text" id="user_password_repeat" required />
+
+      <div>
+        <input type="submit" value="Sign Up" />
+      </div>
+    </form>
   </body>
 </html>
